@@ -162,3 +162,41 @@
 ## Subset 'sce' to the barcodes that are NOT marked for discarding
 ## and reassign it to 'sce'.
 
+
+
+#################
+# Normalization #
+#################
+
+## Use librarySizeFactors() to compute library size factors for the 'sce' object.
+## Assign the result to a new object named 'lib.sf'.
+
+
+
+## Use summary() to see the distribution of values per barcode.
+
+
+
+## Similarly, use ggplot() and geom_histogram() to see the distribution as a plot.
+
+
+
+
+##################################
+# Normalization by deconvolution #
+##################################
+
+## Use quickCluster() to compute clusters of cells with similar expression profiles.
+## Assign the result to a new object named 'clust'.
+## Tip: Set the random seed to ensure reproducible results! (e.g., 100)
+
+
+
+## Use table() to visualise the number of barcodes assigned to each cluster.
+
+
+
+## Use pooledSizeFactors() to compute size factors by deconvolution.
+## Use 'clust' to provide the precomputed cluster assignments.
+## Assign the result to a new object named 'deconv.sf'.
+
