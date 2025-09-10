@@ -77,14 +77,14 @@
 
 ## Load the 'scater' library.
 ## Then, use plotReducedDim() to visualise the 'pca.corrected.E8.5' layout
-## coloured by the 'stage.mapped' column metadata.
+## coloured by the 'stage.mapped' column-wise metadata.
 
 
 
 ## EXERCISE 1 ##
 ## Create a SingleCellExperiment object “from scratch”.
 ## That means:
-## start from a matrix (either randomly generated or with some fake data in it)
+## Start from a matrix (either randomly generated or with some fake data in it)
 ## and add one or more columns as colData.
 
 

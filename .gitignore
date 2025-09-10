@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 biocscrnaseq-eurobioc2025.Rproj
-
+.Rprofile
+renv/
+renv.lock
