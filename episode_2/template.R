@@ -129,3 +129,36 @@
 ## Add a new column named 'discard' in the column-wise metadata
 ## The values should be a copy of the 'discard' column in 'reasons'.
 
+
+
+## CHALLENGE ##
+## Maybe our sample preparation was poor and we want the QC to be more strict.
+## How could we change the set the QC filtering to use 2.5 MADs as the threshold for outlier calling?
+
+
+####################
+# Diagnostic plots #
+####################
+
+## Use plotColData() to visualise
+## the distribution of UMI sum along the Y axis
+## coloured by the 'discard' column of cell-wise metadata
+## Optionally, set the title of the plot to 'Total count'
+
+
+
+## Same as above, except
+## visualise the number of detected features along the Y axis
+## set the title to 'Detected features'
+
+
+
+## Same as above, except
+## visualise the mitochondrial fraction along the Y axis
+## set the title to 'Mito percent'
+
+
+
+## Subset 'sce' to the barcodes that are NOT marked for discarding
+## and reassign it to 'sce'.
+
