@@ -81,8 +81,16 @@
 
 
 
-## Exercise 1 ##
+## EXERCISE 1 ##
 ## Create a SingleCellExperiment object “from scratch”.
 ## That means:
 ## start from a matrix (either randomly generated or with some fake data in it)
 ## and add one or more columns as colData.
+
+
+
+
+## EXERCISE 2 ##
+## Combine two SingleCellExperiment objects.
+## The MouseGastrulationData package contains several datasets.
+## Download sample 6 of the chimera experiment. Use the cbind function to combine the new data with the sce object created before.
