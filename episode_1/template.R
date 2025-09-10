@@ -2,24 +2,24 @@
 # Bioconductor #
 ################
 
-## Use install.packages() to install the package 'ggplot2' from CRAN
+## Use install.packages() to install the package 'ggplot2' from CRAN.
 
 
 
-## Use install.packages() to install the package 'BiocManager' from CRAN
+## Use install.packages() to install the package 'BiocManager' from CRAN.
 
 
 
-## Use BiocManager::install() to install the package 'SingleCellExperiment' from Bioconductor
+## Use BiocManager::install() to install the package 'SingleCellExperiment' from Bioconductor.
 
 
 
 ## Navigate to <https://bioconductor.org/packages/release/bioc/html/scater.html>
-## Then, copy paste instructions from web page to install the package 'scater'
+## Then, copy paste instructions from web page to install the package 'scater'.
 
 
 
-## Use BiocManager::install() to update your packages to the latest version available
+## Use BiocManager::install() to update your packages to the latest version available.
 
 
 
@@ -27,12 +27,12 @@
 # The SingleCellExperiment class #
 #################################
 
-## Load the libraries 'SingleCellExperiment' and 'MouseGastrulationData'
+## Load the libraries 'SingleCellExperiment' and 'MouseGastrulationData'.
 
 
 
-## Use 'WTChimeraData()' to load the fifth sample.
-## Assign the output to a new object called 'sce'
+## Use WTChimeraData() to load the fifth sample.
+## Assign the output to a new object called 'sce'.
 
 
 
@@ -70,3 +70,19 @@
 ## Add a column of gene-wise metadata to the rowData.
 
 
+
+## Display the list of dimensionality reduction results present in the 'sce' object.
+
+
+
+## Load the 'scater' library.
+## Then, use plotReducedDim() to visualise the 'pca.corrected.E8.5' layout
+## coloured by the 'stage.mapped' column metadata.
+
+
+
+## Exercise 1 ##
+## Create a SingleCellExperiment object “from scratch”.
+## That means:
+## start from a matrix (either randomly generated or with some fake data in it)
+## and add one or more columns as colData.
