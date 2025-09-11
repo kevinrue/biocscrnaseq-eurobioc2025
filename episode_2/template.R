@@ -226,9 +226,9 @@
 ## Fill in the blanks for normalization that uses simpler library size factors instead of deconvolution.
 
 
-######################
-## Feature Selection #
-######################
+#####################
+# Feature Selection #
+#####################
 
 ## Use modelGeneVar() to model and decompose the gene-wise biological and technical variance.
 ## Assign the output to a new object called 'dec.sce'.
@@ -255,3 +255,53 @@
 ## CHALLENGE ##
 ## Imagine you have data that were prepared by three people with varying level of experience,
 ## which leads to varying technical noise. How can you account for this blocking structure when selecting HVGs?
+
+
+
+############################
+# Dimensionality Reduction #
+############################
+
+## Use RunPCA() to compute a principal component analysis on 'sce',
+## using only the set of variable genes selected above.
+## Reassign the result to 'sce'.
+
+
+
+## Use ggplot() to visualise the variance explained by each principal component.
+## Hint: Create a new data.frame named 'pct_pca_df' with two columns named 'PC' and 'pct_var'
+## to store the name of each principal component and the variance it explains, respectively.
+
+
+
+## Use plotPCA() to visualise the cells along the first two principal components,
+## coloured by UMI sum.
+
+
+
+## Use plotReducedDim() to visualise each pair of principal components for the first three PCs.
+
+
+
+## Use runTSNE() to compute a t-SNE layout based on the PCA results.
+## Tip: Set the random seed to ensure reproducible results! (e.g., 100)
+
+
+
+## Use plotTSNE() to visualise the t-SNE layout.
+
+
+
+## Use runUMAP() to compute a UMAP layout based on the PCA results.
+## Tip: Set the random seed to ensure reproducible results! (e.g., 111)
+
+
+
+## Use plotUMAP() to visualise the UMAP layout.
+
+
+
+## CHALLENGE ##
+## Re-run the UMAP for the same sample starting from the pre-processed data (i.e. not type = "raw").
+## What looks the same? What looks different?
+
