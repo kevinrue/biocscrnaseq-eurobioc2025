@@ -178,7 +178,7 @@
 
 
 ## Similarly, use ggplot() and geom_histogram() to see the distribution as a plot.
-
+## Hint: Store the size factors in a data.frame named 'sf_df', in a column named 'size_factor'.
 
 
 
@@ -200,3 +200,58 @@
 ## Use 'clust' to provide the precomputed cluster assignments.
 ## Assign the result to a new object named 'deconv.sf'.
 
+
+
+## Use summary() to visualise the distribution of deconvoluted size factors per barcode.
+
+
+
+## Use ggplot() to visualise the standard size factors and the deconvoluted size factors.
+## Colour the points by the cluster assignments in 'clust'.
+## Hints:
+## - Add 'clust' and 'deconv.sf' to 'sf_df', in columns named 'deconv_sf' and 'clust', respectively.
+## - Apply log10 transformation to both x- and y- axes.
+
+
+
+## Use sizeFactors() to assign the deconvoluted size factors to the 'sce' object.
+
+
+
+## Use logNormCounts() to normalise the counts in 'sce' using the deconvoluted size factors.
+
+
+
+## CHALLENGE ##
+## Fill in the blanks for normalization that uses simpler library size factors instead of deconvolution.
+
+
+######################
+## Feature Selection #
+######################
+
+## Use modelGeneVar() to model and decompose the gene-wise biological and technical variance.
+## Assign the output to a new object called 'dec.sce'.
+
+
+
+## Use metadata() to extract the fitted trend from the 'dec.sce' object.
+## Assign the output to a new object called 'fit.sce'.
+
+
+
+## Use ggplot() to visualise the variance and mean expression of each gene.
+## Overlay the fitted trend of from 'fit.sce'.
+## Hint: Create a data.frame named 'mean_var_df' with two columns named 'mean' and 'var'
+## to store the 'mean' and 'var' elements of 'fit.sce'.
+
+
+
+## Use getTopHVGs()to fetch the 1,000 most variable genes,
+## based on the variance modelling statistics stored in 'dec.sce'.
+
+
+
+## CHALLENGE ##
+## Imagine you have data that were prepared by three people with varying level of experience,
+## which leads to varying technical noise. How can you account for this blocking structure when selecting HVGs?
