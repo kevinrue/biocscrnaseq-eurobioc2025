@@ -305,3 +305,14 @@
 ## Re-run the UMAP for the same sample starting from the pre-processed data (i.e. not type = "raw").
 ## What looks the same? What looks different?
 
+
+
+##########################
+# Doublet identification #
+##########################
+
+## Use computeDoubletDensity() to compute doublet scores for each cell in 'sce',
+## using only the set of variable genes selected earlier.
+## Tip: Set the argument 'dims' to 50, to match the number of principal components computed earlier.
+
+
