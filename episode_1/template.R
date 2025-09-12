@@ -94,3 +94,9 @@
 ## Combine two SingleCellExperiment objects.
 ## The MouseGastrulationData package contains several datasets.
 ## Download sample 6 of the chimera experiment. Use the cbind function to combine the new data with the sce object created before.
+
+
+
+###########
+# THE END #
+###########
