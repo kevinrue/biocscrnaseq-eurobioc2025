@@ -145,3 +145,11 @@
 ## - using approximate nearest neighbour search, stored in 'clusters'
 
 
+
+## Use pairwiseRand() to measure the similarity between the two sets
+## of cluster assignments.
+## Assign the result to a new object named 'rand'.
+## Hint: set the argument 'mode' to 'index' to return the Rand index.
+
+
+
