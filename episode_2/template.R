@@ -314,5 +314,93 @@
 ## Use computeDoubletDensity() to compute doublet scores for each cell in 'sce',
 ## using only the set of variable genes selected earlier.
 ## Tip: Set the argument 'dims' to 50, to match the number of principal components computed earlier.
+## Assign the output to a new object called 'dbl.send'.
+
+
+## Use summary() to see the distribution of doublet density values per barcode.
+
+
+
+## Add the doublet density values to the cell-wise metadata of 'sce',
+## in a new column named 'DoubletScore'.
+
+
+
+## Use plotTSNE() to visualise the t-SNE layout coloured by doublet density.
+
+
+
+## Use doubletThresholding() to classify cells into singlets and doublets,
+## using the doublet density scores computed above.
+## Assign the output to a new object called 'dbl.calls'.
+
+
+
+## Use summary() to display the number of singlets and doublets called.
+
+
+
+## Add the doublet calls to the cell-wise metadata of 'sce',
+## in a new column named 'doublet'.
+
+
+
+## Use plotColData() to visualise the distribution of doublet scores as a violin plot
+## coloured by doublet status.
+
+
+
+## Use plotTSNE() to visualise the t-SNE layout coloured by doublet call.
+
+
+
+## Use plotColData() to visualise:
+## - UMI sum on the x-axis
+## - number of genes detected on the y-axis
+## - coloured by doublet score
+
+
+
+## Same as above, except
+## - colour by doublet call
+
+
+
+## EXERCISE 1 - NORMALISATION ##
+## Here we used the deconvolution method implemented in scran based on a previous clustering step.
+## Use the pooledSizeFactors to compute the size factors without considering a preliminary clustering.
+## Compare the resulting size factors via a scatter plot.
+## How do the results change?
+## What are the risks of not including clustering information?
+
+
+
+## EXERCISE 2 - PBMC DATA ##
+## The DropletTestFiles package includes the raw output from Cell Ranger
+## of the peripheral blood mononuclear cell (PBMC) dataset from 10X Genomics,
+## publicly available from the 10X Genomics website.
+## Repeat the analysis of this vignette using those data.
+
+## The hint demonstrates how to identify, download, extract, and read
+## the data starting from the help documentation of ?DropletTestFiles::listTestFiles,
+## but try working through those steps on your own for extra challenge
+## (they’re useful skills to develop in practice).
+
+
+
+## EXTENSION CHALLENGE 1: SPIKE-INS ##
+## Some sophisticated experiments perform additional steps so that they can estimate size factors from so-called “spike-ins”. Judging by the name, what do you think “spike-ins” are, and what additional steps are required to use them?
+
+
+
+## EXTENSION CHALLENGE 2: BACKGROUND RESEARCH ##
+## Run an internet search for some of the most highly variable genes we identified in the feature selection section.
+## See if you can identify the type of protein they produce or what sort of process they’re involved in.
+## Do they make biological sense to you?
+
+
+
+## EXTENSION CHALLENGE 3: REDUCED DIMENSIONALITY REPRESENTATIONS ##
+## Can dimensionality reduction techniques provide a perfectly accurate representation of the data?
 
 
