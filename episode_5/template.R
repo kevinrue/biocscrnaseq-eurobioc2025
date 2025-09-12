@@ -75,4 +75,73 @@
 
 
 
-## 
+## Load the following libraries
+## - MouseGastrulationData
+## - scran
+
+
+
+## Use WTChimeraData() to load the 'processed' data for the fifth sample.
+## Assign the output to a new object called 'sce'.
+
+
+
+## Use logNormCounts() to compute log-normalised counts for 'sce'.
+## Reassign the result to 'sce'.
+
+
+
+## Use modelGeneVar() to model gene variance for 'sce',
+## using MulticoreParam() to parallelise calculations across two workers.
+## Assign the result to a new object named 'dec.mc'.
+
+
+
+## Same as above except:
+## Try using SnowParam to parallelise calculations across two workers.
+## Assign the result to a new object named 'dec.snow'.
+
+
+
+## CHALLENGE ##
+## How do you turn on progress bars with parallel processing?
+
+
+
+
+#######################
+# Fast approximations #
+#######################
+
+## Load the library 'bluster'
+
+
+
+## Use runPCA() to compute principal components for 'sce'.
+
+
+
+## Use clusterCells() to assign cluster labels for each cell in 'sce',
+## using the PCA results computed above,
+## and using a NNGraphParam() parameter object specifying 'louvain' clustering.
+## Assign the cluster labels to the 'sce' object using colLabels().
+
+
+
+## Load the following libraries
+## - scran
+## - BiocNeighbors
+
+
+
+## Use clusterCells() as above except
+## use an AnnoyParam() parameter object to use approximate nearest neighbour search.
+## Assign the result to a new object named 'clusters'.
+
+
+
+## Use table() to compare the cluster assignments
+## - using exact nearest neighbour search, stored in colLabels()
+## - using approximate nearest neighbour search, stored in 'clusters'
+
+
