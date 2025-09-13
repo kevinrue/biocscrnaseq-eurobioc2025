@@ -38,7 +38,7 @@
 
 # select HVGs
 # - modelGeneVar decomposes variance into technical vs biological components
-# - block = sce$sample ensures variance modeling accounts for sample-specific differences/batch
+# - block = sce$sample ensures variance modeling accounts for sample-specific differences
 
 # calculate dimensionality reductions: PCA and t-SNE
 # - PCA on top HVGs (or bio>0 genes), reduce dimensionality for denoising
@@ -58,10 +58,12 @@ color_vec <- c("#5A5156", "#E4E1E3", "#F6222E", "#FE00FA", "#16FF32", "#3283FE",
                "#C075A6", "#782AB6", "#AAF400", "#BDCDFF", "#822E1C", "#B5EFB5", 
                "#7ED7D1", "#1C7F93", "#D85FF7", "#683B79", "#66B0FF", "#FBE426")
 
+
 # Challenge 1 -----
-# It seems like samples 5 and 6 are separated from the others in expression space.
-# Given the groups of cells, why might this be? Likely due to tomato+ vs tomato- condition
-# rather than just biological replicate. The factor is the tdTomato injection.
+# It seems like samples 5 and 6 are separated off from the others in gene 
+# expression space. Given the group of cells in each sample, why might this 
+# make sense versus some other pair of samples? What is the factor presumably 
+# leading to this difference?
 
 
 # Correcting Batch Effects -----
@@ -73,9 +75,7 @@ color_vec <- c("#5A5156", "#E4E1E3", "#F6222E", "#FE00FA", "#16FF32", "#3283FE",
 # plot corrected t-SNE coloured by cell type
 
 # Challenge 2 -----
-# True or False: after batch correction, no batch-level information is present.
-# In practice, some residual batch effect may remain; correction reduces but doesn’t erase.
-
+# True or False: after batch correction, no batch-level information is present. 
 
 # Differential Expression -----
 
@@ -124,8 +124,8 @@ color_vec <- c("#5A5156", "#E4E1E3", "#F6222E", "#FE00FA", "#16FF32", "#3283FE",
 
 
 # Challenge 3 -----
-# Low p-values suggest significance, but effect size (logFC) matters.
-# logFC = log2 fold-change in expression between tomato+ vs tomato-.
+# Clearly some of the results have low p-values. 
+# What about the effect sizes? What does logFC stand for?
 
 
 # Differential Abundance -----
@@ -153,16 +153,25 @@ color_vec <- c("#5A5156", "#E4E1E3", "#F6222E", "#FE00FA", "#16FF32", "#3283FE",
 
 
 # Exercise 1 -----
-# Heatmap of abundances table with pheatmap.
-# Can overlay sample metadata (tomato, pool) as column annotations.
+# Use the pheatmap package to create a heatmap of the abundances table. 
+# Does it comport with the model results?
+# 
+# Hint: You can simply hand pheatmap() a matrix as its only argument. 
+#       pheatmap() has a million options you can adjust, but the defaults are 
+#       usually pretty good. Try to overlay sample-level information with the 
+#       annotation_col argument for an extra challenge.
 
 
 
 
 
 # Exercise 2 -----
-# Re-run pseudoBulkDGE without pool factor; compare to original.
-# Merge results for Erythroid3 and compare logFC estimates and p-values.
+# Try re-running the pseudobulk DGE without the pool factor in the design specification. 
+# Compare the logFC estimates and the distribution of p-values for the Erythroid3 cell type.
+#
+# Hint: After running the second pseudobulk DGE, you can join the two DataFrames 
+#       of Erythroid3 statistics using the merge() function. You will need to create 
+#       a common key column from the gene IDs.
 
 
 
@@ -172,8 +181,8 @@ color_vec <- c("#5A5156", "#E4E1E3", "#F6222E", "#FE00FA", "#16FF32", "#3283FE",
 
 
 # Extension Challenge 1: Group effects -----
-# Multiple independent replicates per group are crucial for reliable correction.
-# Without replicates, batch effect and condition are confounded.
+# Having multiple independent samples in each experimental group is always helpful, 
+# but it is particularly important when it comes to batch effect correction. Why?
 
 
 # Session Info ----
