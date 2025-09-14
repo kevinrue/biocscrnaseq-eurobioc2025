@@ -159,31 +159,39 @@
 # Exercises -----
 
 ## Exercise 1: Clustering -----
-# try Leiden clustering with a specified resolution and objective
+# The Leiden algorithm is similar to the Louvain algorithm, 
+# but it is faster and has been shown to result in better connected 
+# communities. Modify the above call to clusterCells to carry out 
+# the community detection with the Leiden algorithm instead. 
+# Visualize the results in a UMAP plot.
+# Hint: The NNGraphParam constructor has an argument cluster.args.
+#       This allows to specify arguments passed on to the cluster_leiden 
+#       function from the igraph package. Use the cluster.args argument to 
+#       parameterize the clustering to use modularity as the objective function 
+#       and a resolution parameter of 0.5.
 
 
 ## Exercise 2: Reference marker genes -----
-# score markers on the reference dataset (grouped by celltype)
+# Identify the marker genes in the reference single cell 
+# experiment, using the celltype labels that come with the 
+# dataset as the groups. Compare the top 100 marker genes of 
+# two cell types that are close in UMAP space. 
+# Do they share similar marker sets?
 
-# plot labels on pre-computed UMAP 
-
-
-# Repetitive work -> write a helper function to extract top marker symbols
-# using marker data.frame and number of top markers as two input parameters
-# output should be a vector with rownames of the input data.frame with length 
-# matching the number of top markers asked in the input
-
-# proportion of overlap between two top-100 marker lists
 
 ## Extension Challenge 1: Group pair comparisons -----
-# Why do you think marker genes are found by aggregating pairwise comparisons rather than iteratively comparing each cluster to all other clusters?
+# Why do you think marker genes are found by aggregating pairwise 
+# comparisons rather than iteratively comparing each cluster to 
+# all other clusters?
 
 ## Extension Challenge 2: Parallelizing SingleR -----
-# SingleR can be computationally expensive. How do you set it to run in parallel?
+# SingleR can be computationally expensive. 
+# How do you set it to run in parallel?
 
 
 ## Extension Challenge 3: Critical inspection of diagnostics -----
-# The first set of AUCell diagnostics don’t look so good for some of the examples here. Which ones? Why?
+# The first set of AUCell diagnostics don’t look so good for some of 
+# the examples here. Which ones? Why?
 
 
 # Session Info ----
