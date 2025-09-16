@@ -2,6 +2,12 @@
 # HCA Metadata ####
 ###################.
 
+# Install CuratedAtlasQueryR
+
+
+# Load libraries CuratedAtlasQueryR and dplyr
+
+
 # Collect metadata from sample database url
 
 
